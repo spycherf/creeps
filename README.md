@@ -16,5 +16,5 @@ Any feedback on this game is greatly appreciated! Get in touch with me @sprotch 
 
 ## Other games inspired by the Warcraft franchise
 
-[Mercenaries](https://github.com/spycherf/mercenaries), a two-player, turn-based card game
-[Elementals](https://github.com/spycherf/elementals), a single-player card game
+- [Mercenaries](https://github.com/spycherf/mercenaries), a two-player, turn-based card game
+- [Elementals](https://github.com/spycherf/elementals), a single-player card game
