@@ -1,6 +1,6 @@
 # Creeps (card game)
 
-_Creeps_ is a single-player card game inspired by Warcraft III. It borrows several gameplay elements from [Duel 52](https://juddmadden.com/duel52/) (designed by Judd Madden and Nina Riddell) and from [Mercenaries](https://github.com/spycherf/mercenaries). It requires a standard 52-card French-suited deck, plus 2-3 jokers (or any small household objects as substitutes). A game typically lasts about 20 minutes.
+_Creeps_ is a single-player card game inspired by Warcraft III. It borrows several gameplay elements from [Duel 52](https://juddmadden.com/duel52/) (designed by Judd Madden and Nina Riddell) and from [Mercenaries](https://github.com/spycherf/mercenaries). It requires a standard 52-card French-suited deck, plus 2-3 jokers (or any small household objects as substitutes). A game typically lasts about 30 to 45 minutes (depending on the player's experience).
 
 ## Setting
 
@@ -73,11 +73,11 @@ Buildings and items have no value.
 
 ### Health and mana
 
-Cards that take part in combat have _health_, or _hit points_ (HP), representing the amount of _damage_ they can take before being defeated (1 damage = 1 HP). Face cards have 3 HP and number cards have 2 HP—except peasants, which have only 1 HP.
+Cards that take part in combat have _health_, or _hit points_ (HP), representing the amount of _damage_ they can take before being defeated (1 damage = 1 HP). Without bonuses, face cards have 3 HP and number cards have 2 HP—except peasants, which only have 1 HP.
 
 Cards with abilities that cost mana also have 1 _mana point_ (MP).
 
-Some abilities can increase a card's total HP or MP, but no card may exceed 4 HP or 2 MP. If a bonus is removed, current health or mana is only reduced if it exceeds the new total. For example, a hero with a +1 HP bonus drops from 4/4 HP to 3/3 HP when the bonus is removed. The same card at 3/4 HP would remain at 3/3 HP after the bonus is lost.
+Some abilities temporarily increase a card's maximum HP or MP, but no card may exceed 4 HP or 2 MP. When a card gains or loses such bonuses during combat, its current HP or MP are unaffected, unless the current value is higher than the new maximum. In that case, it is reduced to match the maximum. For example: a hero with a +1 HP bonus drops from 4/4 HP to 3/3 HP when the bonus is removed, while the same hero at 3/4 HP would remain at 3/3 HP.
 
 ## Setup
 
@@ -98,7 +98,7 @@ The play area is divided into sections:
 
 Jokers are set aside for later use.
 
-From the reserve, the player draws the footman (6♥), the rifleman (7♥), and one hero of their choice. These form the starting hand.
+From the reserve, the player draws the footman (6♥), the rifleman (7♥), and one hero of their choice. These form the starting hand (the player starts the game with no resources).
 
 ## Playing
 
@@ -108,8 +108,6 @@ The game is played in rounds. Each round follows the same sequence of phases, ea
 2. **Recon**. Dispatch forces to the battlefield to locate a creep camp.
 3. **Combat**. Defeat the creeps.
 4. **Rewards**. Level up and collect resources and items dropped by the creeps.
-
-The player starts the game with no resources.
 
 ### Preparation
 
@@ -131,8 +129,8 @@ The following upgrades are available:
 
 _Blacksmith_
 
-- **Steel Plating**. Grants footmen +1 total HP.
-- **Reinforced Leather Armor**. Grants riflemen +1 total HP.
+- **Steel Plating**. Permanently grants footmen +1 maximum HP.
+- **Reinforced Leather Armor**. Permanently grants riflemen +1 maximum HP.
 
 _Barracks_
 
@@ -141,7 +139,7 @@ _Barracks_
 
 #### Gathering
 
-While in the gold mine, each trained peasant (2/3/4♥) generates 1 additional resource per preparation phase. This _resource bonus_ does not accumulate between rounds if unused.
+While in the gold mine, each trained peasant (2/3/4♥) provides 1 additional resource during the preparation phase. This _resource bonus_ does not accumulate between rounds if unused.
 
 ### Recon
 
@@ -160,14 +158,14 @@ Number of creeps to draw by level:
 
 Combat consists of a repeating cycle of two steps: the player's _attack_ and the creeps' _retaliation_ (see relevant sections below). Both player and creep cards have [abilities](#abilities) that affect combat.
 
-When a card takes damage, it is rotated clockwise for each HP lost—by 90° for cards with 2 total HP, and by 45° otherwise. The card is flipped when defeated. This also removes any positive or negative effects (known as _buffs_ and _debuffs_ respectively).
+Cards enter combat with full health and mana, after all bonuses from upgrades and passive abilities have been applied. When a card takes damage, it is rotated clockwise for each HP lost—by 90° for cards with 2 maximum HP, and by 45° otherwise. The card is flipped when defeated. This also removes any positive or negative effects (known as _buffs_ and _debuffs_ respectively).
 
 Combat ends when all cards on one side have been defeated. There are two possible outcomes:
 
 - **Victory**. The player proceeds to the rewards phase.
 - **Defeat**. The player returns to the preparation phase.
 
-Regardless of the outcome, surviving cards replenish their HP and MP, and the battlefield is cleaned up as follows:
+Regardless of the outcome, surviving cards have their HP and MP replenished, and the battlefield is cleaned up as follows:
 
 _Heroes and units_
 
@@ -185,25 +183,25 @@ When combat starts, the player chooses a card to attack with (the _attacker_). A
 
 On its turn, a card has one _action_, which must be used either to activate an ability or to perform a _basic attack_ dealing 1 damage. Regardless of the action taken, heroes deal +1 damage to targets with a value of 4 or lower.
 
-[Player abilities](#player) are divided into three types: _active_, _passive_, and _ultimate_. Active and ultimate abilities consume an action, whereas passive ones do not. Ultimate abilities are unlocked at level 8 and may be used only once per game.
+[Player abilities](#player) are divided into three types: _active_, _passive_, and _ultimate_. Active and ultimate abilities consume an action, whereas passive ones do not. Ultimate abilities are unlocked at level 6 and may be used only once per game.
 
 At any time during their turn, heroes may also use one [item](#items) from the inventory. This does not consume their action. Used items are discarded face up to the left of the item pile. There are three items in total; once all have been used, the discard pile is shuffled to form a new item pile.
 
 #### Retaliation
 
-In response to the player's attack, creeps retaliate for 1 damage. If the combined value of the remaining creeps is 20 or more, they deal +1 damage. When defeated or _disabled_ (by abilities like Polymorph), creeps cannot retaliate and are therefore excluded from this value check.
+In response to the player's attack, creeps retaliate for 1 damage. If the combined value of the remaining creeps is 20 or more, this damage increases by 1. Defeated and _disabled_ creeps cannot retaliate and are therefore not counted toward this total.
 
-By default, retaliation damage targets the attacker. However, if the player targeted a boss without defeating or disabling it, the damage is directed at the card with the highest value instead.
+By default, retaliation damage is dealt to the attacker. However, if the player targeted a boss without defeating or disabling it, the damage is directed at the card with the highest value instead.
 
-[Creep abilities](#creeps) may trigger during retaliation under certain conditions. Defeated or disabled creeps cannot use their ability.
+[Creep abilities](#creeps) may trigger during retaliation under certain conditions. Defeated and disabled creeps cannot use their ability.
 
 ### Rewards
 
 After a victory, the player may earn three types of rewards:
 
-* **Level**. The player levels up by moving the current level card to the bottom of the pile.
-* **Resources**. The player draws one resource card.
-* **Items**. For each boss they defeated, the player draws one item card and places it face up in the inventory. If the item pile is empty, the player may not draw from the discard pile. If bosses were defeated during an earlier combat phase but the creeps were only fully cleared later, the player should not forget to draw the corresponding item cards at that time.
+- **Level**. The player levels up by moving the current level card to the bottom of the pile.
+- **Resources**. The player draws one resource card.
+- **Items**. For each boss they defeated, the player draws one item card and places it face up in the inventory. If the item pile is empty, the player may not draw from the discard pile. If bosses were defeated during an earlier combat phase but the creeps were only fully cleared later, the player should not forget to draw the corresponding item cards at that time.
 
 ## End of the game
 
@@ -230,13 +228,13 @@ To visually track the effects of abilities marked with an asterisk (*), it is re
 
 _Years of war have taught the people of Lordaeron to take up arms in the kingdom's hour of need, joining the regular army as militia._
 
-- **Call to Arms** (passive). Grants peasants +1 total HP.
+- **Call to Arms** (passive). Permanently grants the peasant +1 maximum HP.
 
 #### Footman (6♥)
 
 _Backbone of the Lordaeron army, seasoned footmen quickly raise their shield to fend off vicious attacks._
 
-- **Defend** (passive, unlocked at the barracks). Grants immunity to abilities triggered the first time creeps retaliate.
+- **Defend** (passive, unlocked at the barracks). Grants immunity to abilities that are triggered only the first time creeps retaliate.
 
 #### Rifleman (7♥)
 
@@ -248,21 +246,21 @@ _Improved blunderbusses give the stout dwarven riflemen enough range to strike b
 
 _Hailing from Quel'Thalas, holy priests bless their allies before battle and heal them during combat._
 
-- **Inner Fire** (passive, magical buff). Before combat starts, grants an ally or the priest +1 total HP.
-- **Heal** (active, 1 MP). Heals an ally or the priest for 2 HP.
+- **Inner Fire** (passive, magical buff). Before combat starts, grants an ally or the priest +1 maximum HP.
+- **Heal** (active, 1 MP). Heals an ally or the priest back to full health.
 
 #### Sorceress (9♥)
 
 _Elven sorceresses harness arcane energy to bind their enemies in heavy chains—or turn them into sheep._
 
-- **Slow** (passive, magical debuff). On the sorceress's first turn, disables a creep of the player's choice.
+- **Slow** (passive, magical debuff). On the sorceress's turn, disables a creep of the player's choice.
 - **Polymorph** (active, 1 MP, magical debuff) (*). Disables the targeted creep until it is damaged.
 
 #### Paladin (J♥)
 
 _Calling on the Light, paladins empower their allies with divine vigor and shield themselves from harm. When the hour is most dire, they bring their fallen comrades back from the dead._
 
-- **Devotion Aura** (passive). Grants the squad +1 total HP while the paladin lives.
+- **Devotion Aura** (passive). While the paladin lives, each retaliation deals no more than 1 damage.
 - **Divine Shield** (passive). The first time the paladin attacks, grants immunity to retaliation damage and creep abilities targeting the paladin.
 - **Resurrection** (ultimate, 1 MP). Revives up to 2 defeated units with full health and no mana. Resurrected units re-enter the attack rotation in their original order.
 
@@ -270,7 +268,7 @@ _Calling on the Light, paladins empower their allies with divine vigor and shiel
 
 _The archmagi from Dalaran boost their allies' mana reserves and call down ice shards from the skies. As a last resort, they can teleport the troops back to safety._
 
-- **Brilliance Aura** (passive). Grants the squad +1 total MP while the archmage lives.
+- **Brilliance Aura** (passive). While the archmage lives, grants each card in the squad +1 maximum MP.
 - **Blizzard** (active, 1 MP, magical, area). Deals 1 damage to each creep in an area up to 3 cards wide.
 - **Mass Teleport** (ultimate, 1 MP). Moves the archmage and all surviving units back to the player's hand, ending combat in defeat. [End-of-combat rules](#combat) apply.
 
@@ -294,7 +292,7 @@ _Troll trappers have mastered the art of pinning down their prey with heavy nets
 
 _Bandits lurk in the shadows, striking when least expected._
 
-- **Hide**. The bandit cannot be targeted until the first time creeps retaliate, at which point he deals 1 damage to the attacker. This damage can be prevented by revealing the bandit early with area abilities.
+- **Hide**. The bandit cannot be targeted until the first time creeps retaliate, at which point he deals 1 damage to the attacker. This damage is separate from retaliation damage. It can be prevented by revealing the bandit early with area abilities.
 
 #### Assassin (7♠)
 
@@ -326,4 +324,4 @@ Each item has an associated tier. Higher tiers offer greater power and utility.
 
 - Tier 1: **Potion of Healing** (A♥). Heals the hero for 1 HP.
 - Tier 2: **Ankh of Reincarnation** (A♣). Brings the hero back to life with 2 HP and no mana. If the hero was defeated during another card's turn, this item may be used at the start of the hero's next turn.
-- Tier 3: **Book of the Dead** (A♠). Summons a skeleton with 1 HP (cannot be modified by bonuses). It immediately deals 1 damage to a target. If summoned before the hero’s attack, the hero avoids retaliation. If summoned after, the skeleton avoids retaliation on its initial strike, then joins the attack rotation, following the usual [attack](#attack) and [retaliation rules](#retaliation). The skeleton is discarded at the end of combat if it survives.
+- Tier 3: **Book of the Dead** (A♠). Summons a skeleton with 1 HP, which immediately deals 1 damage to a target. If summoned before the hero’s attack, the hero avoids retaliation. If summoned after, the skeleton avoids retaliation on its initial strike, then joins the attack rotation, following the usual [attack](#attack) and [retaliation rules](#retaliation). The skeleton is discarded at the end of combat if it survives.
