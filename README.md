@@ -8,8 +8,10 @@ The game rules are found in the `creeps_game_rules.md` file.
 
 ## Campaigns
 
-- **Lordaeron** (the original game): player as humans vs. Lordaeron creeps
-- **Durotar** (in development): player as orcs vs. Durotar creeps
+Players may choose from several _campaigns_. A campaign determines the player's race and the set of creeps they face:
+
+- **Lordaeron** (the original game): player as humans
+- **Durotar** (in development): player as orcs
 
 ## Feedback
 
