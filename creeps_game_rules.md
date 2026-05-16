@@ -547,7 +547,7 @@ When used, this item is placed next to the squad. The squad's next three basic a
 | 5    | [Trapper](#trapper-5)     | [Hunter](#hunter-5)                           |
 | 6    | [Bandit](#bandit-6)       | [Medicine Man](#medicine-man-6)               |
 | 7    | [Assassin](#assassin-7)   | [Windwitch](#windwitch-7)                     |
-| 8    | [Ogre Magi](#ogre-magi-8) | [Impaler](#impaler-8)                         |
+| 8    | [Magi](#magi-8)           | [Impaler](#impaler-8)                         |
 | 9    | [Geomancer](#geomancer-9) | [Nightcrawler](#nightcrawler-9)               |
 | 10   | [Golem](#golem-10)        | [Storm Wyrm](#storm-wyrm-10)                  |
 | J    | (unnamed)                 | [Razormane Chieftain](#razormane-chieftain-j) |
