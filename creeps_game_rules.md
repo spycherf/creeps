@@ -1,10 +1,6 @@
 # Creeps (card game)
 
-_Creeps_ is a single-player card game inspired by Warcraft III. It borrows several gameplay elements from [Duel 52](https://juddmadden.com/duel52/) (designed by Judd Madden and Nina Riddell) and from [Mercenaries](https://github.com/spycherf/mercenaries). It requires a standard 52-card French-suited deck, plus 2-3 jokers (or any small household objects as substitutes). A game typically lasts about 30 to 45 minutes (depending on the player's experience).
-
-## Setting
-
-The game is set on Azeroth, shortly before the Third War. In the human kingdom of Lordaeron, scattered bands of marauders—dubbed _creeps_ by frightened citizens—have been sighted roaming the countryside, pillaging towns and villages. Troubled by these incursions, King Terenas dispatches his forces to restore order and defend the realm from this growing menace...
+_Creeps_ is a single-player card game inspired by _Warcraft III_, set in the world of Azeroth during the Third War. It requires a standard 52-card deck, a few jokers (or any small household objects as substitutes), and optionally some paper clips to track upgrades. A game typically lasts about 30 to 45 minutes.
 
 ## Cards
 
@@ -15,43 +11,21 @@ The game is set on Azeroth, shortly before the Third War. In the human kingdom o
 - **Diamonds** (♦): level
 - **Spades** (♠): creeps
 
-Exceptions: A♥, A♠, and A♣ represent lootable items (see § [Rewards](#rewards) and [Items](#items)).
+Exceptions: A♥, A♣, and A♠ represent lootable items.
 
 ### Ranks
 
-See § [Playing](#playing) and [Abilities](#abilities) for more information on what cards do.
-
 #### Player (♥)
 
-_Units_
-
-- **2/3/4**: peasants
-- **6**: footman
-- **7**: rifleman
-- **8**: priest
-- **9**: sorceress
-
-_Heroes_
-
-- **J**: paladin
-- **Q**: archmage
-- **K**: mountain king
-
-_Buildings_
-
-- **5**: arcane sanctum
-- **10**: blacksmith
+- **2-4, 6-9**: units (2-4 referred to as _workers_)
+- **5, 10**: buildings
+- **J, Q, K**: heroes
 
 #### Creeps (♠)
 
-- **2/3/4**: murlocs
-- **5**: trapper
-- **6**: bandit
-- **7**: assassin
-- **8**: magi
-- **9**: geomancer
-- **10**: golem
-- **J/Q/K**: bosses
+- **2-4**: low-level
+- **5-10**: mid-level
+- **J, Q, K**: high-level
 
 ### Values
 
@@ -63,16 +37,16 @@ Each rank has a corresponding _value_:
 
 What this value represents depends on the suit:
 
-- **Player cards** (♥): their cost; for buildings, the cost of the upgrades they provide
-- **Resource cards** (♣): the amount of currency used to acquire player cards and upgrades
-- **Level cards** (♦): the player's level, from 1 (A) to 13 (K)
-- **Creep cards** (♠): the number used to calculate damage dealt to the player
+- **Player cards**: their cost; for buildings, the cost of the upgrades they provide
+- **Resource cards**: the amount of currency used to acquire player cards and upgrades
+- **Level cards**: the player's level, from 1 (A♦) to 13 (K♦)
+- **Creep cards**: the number used to calculate damage dealt to the player
 
 Items have no value.
 
 ### Health and mana
 
-Cards that take part in combat have _health_, or _hit points_ (HP), representing the amount of _damage_ they can take before being defeated (1 damage = 1 HP). Without bonuses, face cards have 3 HP and number cards have 2 HP—except peasants, which only have 1 HP.
+Cards that take part in combat have _health_, or _hit points_ (HP), representing the amount of _damage_ they can take before being defeated (1 damage = 1 HP). Without bonuses, face cards have 3 HP and number cards have 2 HP—except workers, which only have 1 HP.
 
 Cards with abilities that cost mana also have 1 _mana point_ (MP).
 
@@ -82,22 +56,35 @@ Some abilities increase maximum HP or MP only temporarily. When a card gains or 
 
 ## Setup
 
+### Campaign selection
+
+The player first chooses a _campaign_. Each campaign features a different race, along with its own player, creep, and item cards (for an overview, see § [Appendix: List of cards by campaign](#appendix-list-of-cards-by-campaign)).
+
+The following campaigns are available:
+
+- **[Lordaeron](#lordaeron-human-campaign)** (humans)
+- **[The Barrens](#the-barrens-orc-campaign)** (orcs)
+
+### Play area
+
 The play area is divided into sections:
 
 - **Base** (in front of the player):
-    - **Buildings** (center). The arcane sanctum (5♥) and the blacksmith (10♥) are placed side by side, face up.
+    - **Buildings** (center). Both buildings are placed side by side, face up.
     - **Gold mine** (to the left, about 3 inches wide)
     - **Reserve** (to the right). Remaining player cards are laid out face up, sorted by rank.
-- **Battlefield** (above the base, sized for two rows of six cards)
+- **Battlefield** (above the base, sized for two rows of seven cards)
 - **Creeps** (above the battlefield). Creep cards are shuffled and placed face down.
-- **Rewards** (to the player's left):
+- **Rewards** (on either side of the battlefield):
     - **Level** (bottom). Level cards are sorted and placed face up, with A♦ on top.
     - **Resources** (middle). Resource cards are shuffled and placed face down.
     - **Items** (top). Item cards are shuffled and placed face down.
 
-Jokers are set aside for later use.
+Jokers and other objects are set aside for later use.
 
-To form the starting hand, the player draws the top resource card, three non-peasant units, and one hero. The units and hero may be chosen freely or selected at random.
+### Starting hand
+
+To form the starting hand, the player draws the top resource card, three non-worker units, and one hero. The units and hero may be chosen freely or selected at random.
 
 ## Playing
 
@@ -110,59 +97,47 @@ The game is played in rounds. Each round follows the same sequence of phases, ea
 
 ### Preparation
 
-The player can engage in three activities during this phase: _training_, _upgrading_, _gathering_.
+The player can engage in three activities during this phase: _training_, _upgrading_, and _gathering_.
 
 #### Training
 
-The player may use available resources to train heroes and units from the reserve. The total value of resources spent must be equal to or greater than the combined cost of the selected cards; any excess is lost. Spent resources are discarded face up to the left of the resource pile.
+The player may use available resources to train heroes and units from the reserve. The total value of resources spent must be equal to or greater than the combined value of the selected cards; any excess is lost. Spent resources are discarded face up next to the resource pile.
 
-Reserve cards selected for training are added to the player's hand face down. Peasants are placed face down in the gold mine instead, each slightly offset to the right so all cards remain visible.
+Reserve cards selected for training are added to the player's hand face down. Workers are placed face down in the gold mine instead, each slightly offset so they all remain visible.
 
-Cards in training cannot be used. Training ends at the start of the next preparation phase, at which point the cards are flipped face up.
+Cards in training are inactive and cannot be used. Training ends at the start of the next preparation phase, at which point the cards are flipped face up.
 
 #### Upgrading
 
-The arcane sanctum (5♥) and the blacksmith (10♥) can research _upgrades_ for units. Each upgrade has a cost equal to the building’s value. The rules for spending resources are the same as during training. A building can research more than one upgrade at a time.
+Buildings can research _upgrades_ for units. Each upgrade has a cost equal to the building’s value. The rules for purchasing upgrades are the same as those for training. A building can research more than one upgrade at a time.
 
-While research is in progress, the building is flipped face down; if multiple upgrades are being researched, it is also rotated by 90°. It returns to its previous orientation when research is complete, at the start of the next preparation phase.
-
-The following upgrades are available:
-
-_Arcane sanctum_
-
-- **Priest Master Training**. Teaches priests the [Inner Fire](#player) ability.
-- **Sorceress Master Training**. Teaches sorceresses the [Polymorph](#player) ability.
-
-_Blacksmith_
-
-- **Steel Plating**. Permanently grants footmen +1 maximum HP.
-- **Reinforced Leather Armor**. Permanently grants riflemen +1 maximum HP.
+While research is in progress, the building is flipped face down. If multiple upgrades are being researched, it is also rotated by 90°. It returns to its previous orientation at the start of the next preparation phase, when research is complete.
 
 As a visual aid, the player can mark upgraded cards with paper clips.
 
 #### Gathering
 
-While in the gold mine, each face-up peasant (2/3/4♥) provides 1 additional resource during the preparation phase. This _resource bonus_ does not accumulate between rounds if unused.
+While in the gold mine, each face-up worker provides 1 additional resource during the preparation phase. This _resource bonus_ does not accumulate between rounds if unused.
 
 ### Recon
 
-In this phase, the player selects a _squad_ of up to three cards and places them face up in a row on the battlefield. Peasants are also eligible. Only one hero may be deployed.
+In this phase, the player selects a _squad_ of up to three cards and places them face up in a row on the battlefield. Workers are also eligible. Only one hero may be deployed.
 
 If no creeps remain from the previous combat phase, a number of cards determined by the player's level (see below) are drawn from the creep pile and placed face up in a row on the battlefield, facing the player’s squad. If the pile is empty, discarded creeps are shuffled to form a new pile.
 
-Number of creeps to draw by level:
-
-- **Level 1**: 2 cards
-- **Levels 2-3**: 3 cards
-- **Levels 4-7**: 4 cards
-- **Levels 8-10**: 5 cards
-- **Level 11+**: 6 cards
+| Level | Creeps |
+| :---: | :----: |
+| 1     | 2      |
+| 2-3   | 3      |
+| 4-7   | 4      |
+| 8-10  | 5      |
+| 11+   | 6      |
 
 ### Combat
 
-Combat consists of a repeating cycle of two steps: the player's _attack_ and the creeps' _retaliation_ (see relevant sections below). Both player and creep cards have [abilities](#abilities) that affect combat.
+Combat consists of a repeating cycle of two steps: the player's _attack_ and the creeps' _retaliation_ (see relevant sections below).
 
-Cards enter combat with full health and mana, after all bonuses from upgrades and passive abilities have been applied. When a card takes damage, it becomes _injured_ and is rotated clockwise for each HP lost—by 90° for cards with 2 maximum HP, and by 45° otherwise. The card is flipped face down when defeated. This also removes any positive or negative effects (known as _buffs_ and _debuffs_ respectively).
+Cards enter combat with full health and mana, after all bonuses from upgrades and passive abilities have been applied. When a card takes damage, it becomes _injured_ and is rotated clockwise for each HP lost—by 90° for cards with 2 maximum HP, and by 45° otherwise. When a card reaches 0 HP, it is _defeated_ and flipped face down. This also removes any positive or negative effects (known as _buffs_ and _debuffs_ respectively).
 
 Combat ends when all cards on one side have been defeated and cannot be revived. There are two possible outcomes:
 
@@ -174,37 +149,56 @@ Regardless of the outcome, surviving cards have their HP and MP replenished, and
 _Heroes and units_
 
 - Defeated cards go to the reserve.
-- Surviving peasants are placed face down in the gold mine. They do not contribute to the resource bonus in the next preparation phase; the player must wait until the end of the next round before flipping them again.
+- Surviving workers are placed face down in the gold mine. They do not contribute to the resource bonus in the next preparation phase; the player must wait until the end of the next round before flipping them again.
 - The remaining cards return to the player's hand.
 
 _Creeps_
 
-- Defeated cards are discarded face down in a horizontal pile to the left of the creep pile.
-- Surviving cards remain on the battlefield. They are shifted to the left to close any gaps left by defeated creeps.
+- Defeated cards are discarded face down in a horizontal pile next to the creep pile.
+- Surviving cards remain on the battlefield. They are shifted to one side to close any gaps left by defeated creeps.
 
 #### Attack
 
-When combat starts, the player selects a card to attack with (the _attacker_). A different card must be chosen for each subsequent attack until all cards have attacked once. The same _attack rotation_ must be used for the remainder of combat, skipping any cards that have been defeated. It is recommended to reorder the cards to reflect this rotation.
+When combat starts, the player selects a card to attack with (the _attacker_). A different card must be chosen for each subsequent attack until all cards have attacked once. The same _attack rotation_ must then be used for the remainder of combat, skipping any cards that have been defeated. It is recommended to reorder the cards to reflect this rotation.
 
-On its turn, a card has one _action_, which must be used either to activate an ability or to perform a _basic attack_ dealing 1 damage to a creep. Regardless of the action taken, heroes deal +1 damage to targets with a value of 4 or lower.
+On its turn, a card has one _action_, which must be used either to activate an ability or to perform a _basic attack_. Basic attacks deal 1 damage and may not exceed 2 damage with bonuses. Regardless of the action taken, heroes deal +1 damage to low-level creeps.
 
-[Player abilities](#player) are divided into three types: _passive_, _active_, and _ultimate_. Active and ultimate abilities consume an action, whereas passive ones do not. Each ultimate ability may be used only once per game. Some abilities are locked until the player reaches a certain level.
+##### Player abilities
 
-While they live, heroes may use any number of items from the player's hand, during any card's turn (see § [Items](#items) for item-specific restrictions). Used items are discarded face up to the left of the item pile. There are three items in total; once all have been used, the discard pile is shuffled to form a new pile.
+Player abilities are divided into three types: _passive_, _active_, and _ultimate_. Active and ultimate abilities consume an action, whereas passive ones do not. Each ultimate ability may be used only once per game.
 
-Some abilities and items can _disable_ one or more creeps, preventing them from retaliating. Unless otherwise specified, this effect lasts for one retaliation.
+Some abilities have additional attributes, such as:
+
+- **Magical**. Such abilities cannot be used against magic-immune targets. Magical buffs and debuffs can be dispelled.
+- **Area**. These abilities affect multiple creeps within a designated area. All creeps in the area are considered targets. The player may position the area so that part of it extends beyond the battlefield edge, thus hitting fewer creeps.
+
+Some abilities are unlocked only when the player reaches a certain level, or through the upgrading system.
+
+##### Items
+
+While they live, heroes may use any number of items from the player's hand, during any card's turn (item-specific restrictions may apply). Used items are discarded face up next to the item pile. There are three items in total; once all have been used, the discard pile is shuffled to form a new pile.
+
+##### Disabling
+
+Some abilities and items can _disable_ one or more creeps, preventing them from retaliating. Unless otherwise specified, this effect lasts for one retaliation only.
 
 #### Retaliation
 
-After the player's turn, creeps that have not been defeated or disabled retaliate.
+After the player's turn, creeps that have not been disabled or defeated retaliate.
 
-By default, retaliation targets the attacker. However, if the player attacked a boss without defeating or disabling it, the target is determined using the following priority order:
+By default, retaliation targets the attacker. However, if the attacker's action affected a high-level creep—and that creep is not disabled or defeated—the target is determined using the following priority order:
 
 1. A card with 1 HP remaining (if multiple cards qualify, the one with the highest value is selected)
 2. The hero, if already injured
 3. The attacker
 
-Retaliation deals 1 damage, +1 damage if the combined value of the remaining non-disabled creeps is 20 or more. Additionally, [creep abilities](#creeps) may trigger under certain conditions (provided those creeps are not disabled).
+If the retaliation target was defeated as a result of its action before retaliation started, the remaining player card with the highest value is targeted instead.
+
+Retaliation deals 1 damage to the target, +1 damage if the combined value of the remaining non-disabled creeps is 20 or more.
+
+##### Creep abilities
+
+In addition to retaliation damage, creep abilities may trigger under certain conditions—provided those creeps are not disabled or defeated. Magical creep abilities follow the same rules as magical player abilities.
 
 ### Rewards
 
@@ -212,125 +206,358 @@ After a victory, the player may earn three types of rewards:
 
 - **Level**. The player levels up by moving the current level card to the bottom of the pile.
 - **Resources**. The player draws one resource card.
-- **Items**. The player draws one item card for each boss they defeated. If the item pile is empty, the player may not draw from the discard pile. If bosses were defeated during an earlier combat phase but the creeps were only fully cleared later, the player should not forget to draw the corresponding item cards at that time.
+- **Items**. The player draws one item card for each high-level creep they defeated. If the item pile is empty, the player may not draw from the discard pile. If high-level creeps were defeated during an earlier combat phase but the creeps were only fully cleared later, the player should not forget to draw the corresponding item cards at that time.
 
 ## End of the game
 
-The player wins the game when they reach level 13 (K♦). The game is lost if the player is unable to deploy a squad during the recon phase.
+The player wins the game when they reach level 13. The game is lost if the player is unable to deploy a squad during the recon phase.
 
 ### Hard mode
 
 In this optional mode, the game continues until the player loses. To level up beyond level 13, the level pile is reset, with A♦ now representing level 14. The player no longer gains resources during rewards phases.
 
-## Abilities
+## How to read abilities
 
-See § [Combat](#combat) first to fully understand the ability descriptions below (especially concepts like ability types, retaliation, and disabling). 
+The ability descriptions below include the following elements (when applicable):
 
-The type (passive, active, or ultimate) and the mana cost (if any) are specified for each player ability. Some abilities have additional attributes, such as:
+> _Flavor text_
+> 
+> **Ability name** (type, mana cost, additional attributes, unlocking conditions). Effect.
 
-- **Magical**. Such abilities cannot be used against magic-immune targets. Magical buffs and debuffs can be dispelled by creeps.
-- **Area**. These abilities affect multiple creeps within a designated area. All affected creeps are considered targets. The player may position the area so that part of it extends beyond the battlefield edge, thus hitting fewer creeps.
+Some abilities are also marked with an asterisk (*). To help track their effects, jokers should be placed on top of the affected cards or next to them (depending on the ability). Any small household objects can serve as substitutes (coins, bottle caps, rubber bands, etc.).
 
-To help track the effects of abilities marked with an asterisk (*), it is recommended to place jokers on the affected cards. Any small household objects (such as coins, bottle caps, or rubber bands) can serve as substitutes.
+See § [Combat](#combat) first to understand key concepts used in the descriptions, such as retaliation and disabling.
 
-### Player
+## Lordaeron (human campaign)
 
-#### Peasant (2/3/4♥)
+_In the kingdom of Lordaeron, scattered bands of marauders—dubbed creeps by frightened citizens—have been sighted roaming the countryside, pillaging towns and villages. Troubled by these incursions, King Terenas dispatches his forces to restore order and defend the realm from this growing menace..._
+
+### Racial advantage
 
 _Years of war have taught the people of Lordaeron to take up arms in the kingdom's hour of need, joining the regular army as militia._
 
-- **Call to Arms** (passive). Permanently grants the peasant +1 maximum HP.
+**Call to Arms**. Permanently grants Peasants +1 maximum HP.
+
+### Upgrades
+
+#### Arcane Sanctum (5♥)
+
+**Priest Master Training**. Teaches Priests the [Inner Fire](#priest-8) ability.
+
+**Sorceress Master Training**. Teaches Sorceresses the [Polymorph](#sorceress-9) ability.
+
+#### Blacksmith (10♥)
+
+**Steel Plating**. Permanently grants Footmen +1 maximum HP.
+
+**Reinforced Leather Armor**. Permanently grants Riflemen +1 maximum HP.
+
+### Player abilities
 
 #### Footman (6♥)
 
 _Backbone of the Lordaeron army, seasoned footmen quickly raise their shield to fend off vicious attacks._
 
-- **Defend** (passive). Grants the footman immunity to creep abilities that are triggered only on the first retaliation. The first damage taken by the footman is reduced by 1.
+**Defend** (passive). Grants the Footman immunity to creep abilities that are triggered only on the first retaliation. The first damage taken by the Footman is reduced by 1.
 
 #### Rifleman (7♥)
 
 _Improved blunderbusses give the stout dwarven riflemen enough range to strike before the enemy can react._
 
-- **Long Rifles** (passive). If the rifleman attacks first, creeps cannot retaliate.
+**Long Rifles** (passive). If the Rifleman attacks first, creeps cannot retaliate.
 
 #### Priest (8♥)
 
 _Hailing from Quel'Thalas, priests heal and infuse their allies with holy magic._
 
-- **Heal** (passive). On the priest's turn, heals an injured hero or unit for 1 HP.
-- **Inner Fire** (active, 1 MP, magical buff, unlocked at the arcane sanctum) (*). Grants a hero or unit +1 damage on its next basic attack and reduces the next retaliation damage it takes by 1.
+**Heal** (passive). On the Priest's turn, heals an injured player card for 1 HP.
+
+**Inner Fire** (active, 1 MP, magical buff, unlocked at the Arcane Sanctum) (*). Grants a player card +1 damage on its next basic attack and reduces the next retaliation damage it takes by 1.
 
 #### Sorceress (9♥)
 
 _Elven sorceresses harness arcane energy to bind their enemies in heavy chains—or turn them into sheep._
 
-- **Slow** (passive, magical debuff). On the sorceress's turn, disables a creep of the player's choice.
-- **Polymorph** (active, 1 MP, magical debuff, unlocked at the arcane sanctum) (*). Disables the targeted creep until it is damaged.
+**Slow** (passive, magical debuff). On the Sorceress's turn, disables a creep of the player's choice.
+
+**Polymorph** (active, 1 MP, magical debuff, unlocked at the Arcane Sanctum) (*). Disables the targeted creep until it is damaged.
 
 #### Paladin (J♥)
 
 _Calling on the Light, paladins empower the troops with divine vigor and shield themselves from harm. When the hour is most dire, they bring their fallen comrades back from the dead._
 
-- **Divine Shield** (passive). On the paladin's first turn, grants the paladin immunity to retaliation damage and creep abilities.
-- **Devotion Aura** (passive, unlocked at level 4). While the paladin lives, the threshold for the retaliation damage bonus is raised from 20 to 25.
-- **Resurrection** (ultimate, 1 MP, unlocked at level 6). Revives up to 2 defeated units with full health and no mana. Resurrected units re-enter the attack rotation in their original order.
+**Divine Shield** (passive). Grants the Paladin immunity to all damage and creep abilities on the retaliation following the Paladin's first turn.
+
+**Devotion Aura** (passive, unlocked at level 4). While the Paladin lives, the threshold for the retaliation damage bonus is raised from 20 to 25.
+
+**Resurrection** (ultimate, 1 MP, unlocked at level 6). Revives up to 2 defeated units with full health and no mana. Resurrected units re-enter the attack rotation in their original order.
 
 #### Archmage (Q♥)
 
 _The archmagi from Dalaran boost their allies' mana reserves and call down ice shards from the skies. As a last resort, they can teleport the troops back to safety._
 
-- **Blizzard** (active, 1 MP, magical, area). Deals 1 damage to each creep in an area 3 cards wide.
-- **Brilliance Aura** (passive, unlocked at level 4). While the archmage lives, grants each card in the squad +1 maximum MP.
-- **Mass Teleport** (ultimate, 1 MP, unlocked at level 6). Moves the archmage and all surviving units back to the player's hand, ending combat in defeat. [End-of-combat rules](#combat) apply.
+**Blizzard** (active, 1 MP, magical, area). Deals 1 damage to each creep in an area 3 cards wide.
 
-#### Mountain king (K♥)
+**Brilliance Aura** (passive, unlocked at level 4). While the Archmage lives, grants each card in the squad +1 maximum MP.
+
+**Mass Teleport** (ultimate, 1 MP, unlocked at level 6). Moves the Archmage and all surviving units back to the player's hand, ending combat in defeat ([end-of-combat rules](#combat) apply).
+
+#### Mountain King (K♥)
 
 _The dwarven thanes of Khaz Modan wield enchanted weapons to crush their foes. When channeling their ancestral heritage, they enter a state of unstoppable fury._
 
-- **Storm Bolt** (active, 1 MP, magical). Deals 2 damage and disables the targeted creep.
-- **Bash** (passive, unlocked at level 4). Basic attacks also disable the targeted creeps.
-- **Avatar** (ultimate, 1 MP, unlocked at level 6). Deals 2 damage and disables the targeted creep. For the remainder of combat, the mountain king's basic attacks deal +1 damage.
+**Storm Bolt** (active, 1 MP, magical). Deals 2 damage and disables the targeted creep.
 
-### Creeps
+**Bash** (passive, unlocked at level 4). The Mountain King's basic attacks also disable the targeted creeps.
+
+**Avatar** (ultimate, 1 MP, unlocked at level 6). Deals 2 damage and disables the targeted creep. For the remainder of combat, the Mountain King's basic attacks deal +1 damage.
+
+### Creep abilities
 
 #### Trapper (5♠)
 
 _Troll trappers have mastered the art of pinning down their prey with heavy nets._
 
-- **Ensnare** (*). When damaged, the trapper casts a net on the attacker. On its next turn, that card cannot attack or use abilities, but still suffers retaliation damage.
+**Ensnare** (*). When damaged, the Trapper casts a net on the attacker. On its next turn, that card has no action, but still triggers retaliation.
 
 #### Bandit (6♠)
 
 _Bandits lurk in the shadows, striking when least expected._
 
-- **Hide**. When combat starts, the bandit is hidden and can only be targeted with area abilities. If not revealed by such an ability, the bandit becomes visible on the first retaliation and deals 1 damage to the attacker (separate from retaliation damage).
+**Hide**. When combat starts, the Bandit is hidden and can only be targeted with area abilities. If not revealed by such an ability, the Bandit becomes visible on the first retaliation and deals 1 damage to the attacker.
 
 #### Assassin (7♠)
 
 _Gnoll assassins coat their bolts with a lethal toxin before battle._
 
-- **Envenomed Weapons** (*). On the first retaliation, the assassin shoots a poisoned bolt at the attacker. The affected card is defeated at the end of its next turn, unless combat ends first.
+**Envenomed Weapons** (*). On the first retaliation, the Assassin shoots a poisoned bolt at the attacker. That card is defeated at the end of its next turn, unless combat ends first.
 
 #### Magi (8♠)
 
 _The two-headed ogre magi incite their comrades to violence by imbuing them with supernatural speed._
 
-- **Bloodlust**. If at least two creeps are currently injured or defeated, creeps retaliate twice. The second retaliation does not trigger creep abilities.
+**Bloodlust**. If at least two creeps are currently injured or defeated, creeps retaliate twice. The second retaliation does not trigger creep abilities.
 
 #### Geomancer (9♠)
 
 _Kobold geomancers call upon the power of earth to strip magic from foes and allies alike._
 
-- **Abolish Magic**. At the start of each retaliation, the geomancer dispels 1 magical effect applied by the player, prioritizing as follows: long-lasting debuffs, turn-long debuffs, buffs (e.g., Polymorph &rarr; Slow &rarr; Inner Fire).
+**Abolish Magic** (magical). At the start of each retaliation, the Geomancer dispels 1 magical effect applied by the player, prioritizing as follows: long-lasting debuffs, turn-long debuffs, buffs (e.g., [Polymorph](#sorceress-9) &rarr; [Slow](#sorceress-9) &rarr; [Inner Fire](#priest-8)).
 
 #### Golem (10♠)
 
 _The rocky constitution of golems protects them from magic._
 
-- **Spell Immunity**. Grants the golem immunity to magical abilities.
+**Spell Immunity**. Grants the Golem immunity to magical player abilities.
 
-## Items
+### Items
 
-- **Potion of Healing** (A♥). Heals the hero for 2 HP. This item may only be used if the hero is injured.
-- **Ankh of Reincarnation** (A♣). Once obtained, this card must be placed on the hero during recon. When defeated, the hero is immediately revived with 2 HP and no mana, and the item is discarded.
-- **Infernal Stone** (A♠). Calls an infernal down from the sky, disabling creeps on impact in an area 2 cards wide. This demon has 2 HP and joins the attack rotation before the hero's turn. It is discarded at the end of combat if it survives.
+#### Potion of Healing (A♥)
+
+Heals the hero for 2 HP. This item may only be used if the hero is injured.
+
+#### Ankh of Reincarnation (A♣)
+
+Once obtained, this item must be placed on top of the hero during recon. When defeated, the hero is immediately revived with 2 HP and no mana, and the item is discarded.
+
+#### Infernal Stone (A♠)
+
+Calls an infernal down from the sky, disabling creeps on impact in an area 2 cards wide. This demon has 2 HP and joins the attack rotation before the hero's turn. It is discarded when combat ends.
+
+## The Barrens (orc campaign)
+
+_Following the counsel of the Prophet, Thrall leads the Horde across the Great Sea. After a perilous voyage, the orcs land upon the savage shores of Kalimdor. With their newfound troll and tauren allies, they venture inland, where the harsh wilderness and its brutal inhabitants test their strength and resolve..._
+
+### Racial advantage
+
+_Driven from their dying world, orcs have learned to seize whatever spoils they can find._
+
+**Pillage**. In the preparation phase following a victory, increases the resource bonus by 1 for each Raider, Grunt, or Peon that survived combat.
+
+### Upgrades
+
+#### Spirit Lodge (5♥)
+
+**Witch Doctor Master Training**. Teaches Witch Doctors the [Healing Ward](#witch-doctor-8) ability.
+
+**Shaman Master Training**. Teaches Shamans the [Bloodlust](#shaman-9) ability.
+
+#### War Mill (10♥)
+
+**Thorium Weapons**. Permanently grants Raiders and Grunts +1 damage against low-level creeps.
+
+**Thorium Armor**. Permanently grants Raiders and Grunts +1 maximum HP.
+
+### Player abilities
+
+#### Grunt (6♥)
+
+_The battle-hardened grunts fight with savage fury when brought to the brink of death._
+
+**Berserker Strength** (passive). If all high-level creeps are disabled or defeated, the first damage that would defeat the Grunt is reduced by 1. While at 1 HP, the Grunt deals +1 damage.
+
+#### Raider (7♥)
+
+_Raiders sweep across the battlefield astride their wolves, trapping unsuspecting enemies with nets._
+
+**Ensnare** (passive) (*). On the Raider's turn, disables a creep of the player's choice until the start of the Raider's next turn—or, if the Raider is defeated, until that turn would occur.
+
+#### Witch Doctor (8♥)
+
+_These cunning trolls from the Darkspear Islands channel voodoo magic through their totems to stun foes and mend allies._
+
+**Stasis Trap Ward** (passive, area). On the Witch Doctor's first turn, disables creeps in an area 3 cards wide.
+
+**Healing Ward** (active, 1 MP, unlocked at the Spirit Lodge) (*). Summons a ward next to the Witch Doctor that restores 1 HP to the player card with the fewest HP remaining. If multiple cards qualify, the player chooses which one is healed. This effect triggers again at the start of the Witch Doctor's next two turns—or, if the Witch Doctor is defeated, when those turns would occur. The ward is rotated by 90° with each additional trigger and discarded when it expires.
+
+#### Shaman (9♥)
+
+_Having renounced fel magic, shamans draw on the elements to invigorate the Horde and disrupt their enemies._
+
+**Purge** (passive, magical | magical debuff) (*). On the Shaman's turn, either dispels all magical debuffs from a player card, or dispels all magical buffs from the targeted creep and disables it. For the remainder of combat, that creep's value is ignored when calculating retaliation damage. If the target is a summoned creep, it is defeated.
+
+**Bloodlust** (active, 1 MP, magical buff, unlocked at the Spirit Lodge). On their next turn, other cards in the squad get an additional action.
+
+#### Blademaster (J♥)
+
+_The skilled swordsmen of the Burning Blade clan move so fast they leave afterimages behind. When the battle turns dire, they unleash their rage in a whirlwind of blades._
+
+**Mirror Image** (active, 1 MP). Performs a basic attack on the targeted creep. Two illusions of the Blademaster each deal 1 damage to a creep of the player's choice. Their target may be the same or different.
+
+**Wind Walk** (passive, unlocked at level 4). The Blademaster's first basic attack deals +1 damage.
+
+**Bladestorm** (ultimate, 1 MP, area, unlocked at level 6). Deals 1 damage to all creeps and grants the Blademaster immunity to magical creep abilities on the following retaliation.
+
+#### Far Seer (Q♥)
+
+_Close advisors to Thrall, seers cast their gaze across vast distances and harness lightning in battle. These powerful shamans can make the very earth tremble._
+
+**Chain Lightning** (active, 1 MP, magical, area). In an area 3 cards wide, starting from either left or right, deals 2 damage to the first target, 1 damage to the next, and 1 damage to the last if it is a low- or mid-level creep.
+
+**Far Sight** (passive, unlocked at level 4). During recon, with the Far Seer in hand, the player may draw creep cards before deploying their squad. Hidden creeps are revealed when combat starts.
+
+**Earthquake** (ultimate, 1 MP, area, unlocked at level 6). Deals 1 damage to each low- or mid-level creep in an area 4 cards wide, and disables all creeps in that area until the start of the Far Seer's next turn—or, if the Far Seer is defeated, until that turn would occur.
+
+#### Tauren Chieftain (K♥)
+
+_Tauren chieftains charge their foes with crushing force. Their strong spirit allows them to cheat death once._
+
+**Shockwave** (active, 1 MP, area). Deals 1 damage to each creep in an area 3 cards wide.
+
+**War Stomp** (passive, area, unlocked at level 4). On the Tauren Chieftain's first turn, disables creeps in an area 3 cards wide.
+
+**Reincarnation** (ultimate, unlocked at level 6). When defeated, the Tauren Chieftain is immediately revived with full health and mana.
+
+### Creep abilities
+
+#### Hunter (5♠)
+
+_Despite their bulky frame, the elusive quillboar hunters are quick to dodge incoming blows._
+
+**Evasion**. If not disabled, the Hunter avoids the first basic attack targeting it.
+
+#### Medicine Man (6♠)
+
+_The Razormane tribe's shamans conjure ghostly boars to overwhelm the enemy._
+
+**Feral Spirit** (*). When combat starts, the Medicine Man summons a spirit pig with 1 HP and a value of 6, placed to its left.
+
+#### Windwitch (7♠)
+
+_Vindictive to the last, harpy witches enfeeble those who dare strike at them._
+
+**Faerie Fire** (magical debuff) (*). When damaged, the Windwitch curses the attacker. Starting on its next turn, that card takes +1 retaliation damage.
+
+#### Impaler (8♠)
+
+_These elite centaur archers loose fiery arrows as they stampede across the plains._
+
+**Searing Arrows**. On each retaliation, the Impaler deals 1 damage to the highest-value player card remaining.
+
+#### Nightcrawler (9♠)
+
+_When the sun sets over the Barrens, murlocs emerge from the tide to slaughter their victim._
+
+**Hide**. When combat starts, the Nightcrawler is hidden and can only be targeted with area abilities. If not revealed by such an ability or [Far Sight](#far-seer-q), the Nightcrawler becomes visible on the first retaliation and deals 1 damage to the attacker.
+
+**Envenomed Weapons** (*). On the first retaliation where the Nightcrawler is not disabled, the attacker is poisoned. That card is defeated at the end of its next turn, unless combat ends first.
+
+#### Storm Wyrm (10♠)
+
+_These thunder lizards breathe lightning and devour their prey, slowly digesting them alive._
+
+**Devour**. When hit by a basic attack for the first time, the Storm Wyrm consumes the attacker when retaliation starts. That card is placed on top of the Storm Wyrm. Starting with the current retaliation, it takes 1 damage on each retaliation but is immune to all other damage and creep abilities. While being consumed, that card has no action on its turn, but still triggers retaliation. It is returned to its original position when the Storm Wyrm is defeated.
+
+**Lightning Shield** (magical buff). The Storm Wyrm deals 1 damage to the attacker when hit by a basic attack. This effect triggers even if the Storm Wyrm is disabled or defeated. The damage is applied immediately after the attack, before retaliation starts.
+
+#### Razormane Chieftain (J♠)
+
+_When threatened, these fierce quillboar warriors erect their jagged spines._
+
+**Thorns Aura**. If already injured, the Razormane Chieftain deals 1 damage to the attacker when hit by a basic attack. This effect triggers even if the Razormane Chieftain is disabled or defeated. The damage is applied immediately after the attack, before retaliation starts.
+
+#### Harpy Queen (Q♠)
+
+_With a powerful flap of their wings, harpy queens send their foes flying into the air._
+
+**Cyclone** (magical) (*). The first time the Harpy Queen is damaged while not disabled, the attacker is thrown into the air when retaliation starts. On its next turn, that card has no action, but still triggers retaliation. Until that turn, it is immune to all damage and creep abilities, and retaliation that would target it instead follows the priority order for high-level creep targeting. If the affected card is a hero, items cannot be used during this time.
+
+#### Centaur Khan (K♠)
+
+_The mighty centaur leaders rise again after falling in battle._
+
+**Reincarnation**. When defeated for the first time, the Centaur Khan is revived with 2 HP when retaliation starts.
+
+### Items
+
+#### Health Stone (A♥)
+
+Heals the hero for 1 HP. This item is then placed on top of the hero. Starting on the hero's next turn, it may be consumed to restore another 2 HP. It is discarded when consumed, otherwise when combat ends. This item may only be used if the hero is injured.
+
+#### Potion of Mana (A♣)
+
+Restores 1 MP to the hero. This item may not be used if the hero is at full mana.
+
+#### Scroll of the Beast (A♠)
+
+When used, this item is placed next to the squad. The squad's next three basic attacks deal +1 damage. The item is rotated by 45° after each attack and discarded when it expires.
+
+## Appendix: List of cards by campaign
+
+### Player
+
+| ♥    | Lordaeron                           | The Barrens                             |
+| :--: | ----------------------------------- | --------------------------------------- |
+| 2-4  | Peasants                            | Peons                                   |
+| 5    | [Arcane Sanctum](#arcane-sanctum-5) | [Spirit Lodge](#spirit-lodge-5)         |
+| 6    | [Footman](#footman-6)               | [Grunt](#grunt-6)                       |
+| 7    | [Rifleman](#rifleman-7)             | [Raider](#raider-7)                     |
+| 8    | [Priest](#priest-8)                 | [Witch Doctor](#witch-doctor-8)         |
+| 9    | [Sorceress](#sorceress-9)           | [Shaman](#shaman-9)                     |
+| 10   | [Blacksmith](#blacksmith-10)        | [War Mill](#war-mill-10)                |
+| J    | [Paladin](#paladin-j)               | [Blademaster](#blademaster-j)           |
+| Q    | [Archmage](#archmage-q)             | [Far Seer](#far-seer-q)                 |
+| K    | [Mountain King](#mountain-king-k)   | [Tauren Chieftain](#tauren-chieftain-k) |
+
+### Creeps
+
+| ♠    | Lordaeron                 | The Barrens                                   |
+| :--: | ------------------------- | --------------------------------------------- |
+| 2-4  | Murlocs                   | Quillboars                                    |
+| 5    | [Trapper](#trapper-5)     | [Hunter](#hunter-5)                           |
+| 6    | [Bandit](#bandit-6)       | [Medicine Man](#medicine-man-6)               |
+| 7    | [Assassin](#assassin-7)   | [Windwitch](#windwitch-7)                     |
+| 8    | [Ogre Magi](#ogre-magi-8) | [Impaler](#impaler-8)                         |
+| 9    | [Geomancer](#geomancer-9) | [Nightcrawler](#nightcrawler-9)               |
+| 10   | [Golem](#golem-10)        | [Storm Wyrm](#storm-wyrm-10)                  |
+| J    | (unnamed)                 | [Razormane Chieftain](#razormane-chieftain-j) |
+| Q    | (unnamed)                 | [Harpy Queen](#harpy-queen-q)                 |
+| K    | (unnamed)                 | [Centaur Khan](#centaur-khan-k)               |
+
+### Items
+
+|      | Lordaeron                                         | The Barrens                                   |
+| :--: | ------------------------------------------------- | --------------------------------------------- |
+| A♥   | [Potion of Healing](#potion-of-healing-a)         | [Health Stone](#health-stone-a)               |
+| A♣   | [Ankh of Reincarnation](#ankh-of-reincarnation-a) | [Potion of Mana](#potion-of-mana-a)           |
+| A♠   | [Infernal Stone](#infernal-stone-a)               | [Scroll of the Beast](#scroll-of-the-beast-a) |

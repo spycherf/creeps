@@ -1,23 +1,18 @@
 # Creeps (card game)
 
-_Creeps_ is a single-player card game inspired by Warcraft III. It borrows several gameplay elements from [Duel 52](https://juddmadden.com/duel52/) (designed by Judd Madden and Nina Riddell) and from [Mercenaries](https://github.com/spycherf/mercenaries). It requires a standard 52-card French-suited deck, plus 2-3 jokers (or any small household objects as substitutes). A game typically lasts about 30 to 45 minutes (depending on the player's experience).
+_Creeps_ is a single-player card game inspired by _Warcraft III_, set in the world of Azeroth during the Third War. It requires a standard 52-card deck, a few jokers (or any small household objects as substitutes), and optionally some paper clips to track upgrades. A game typically lasts about 30 to 45 minutes.
 
 ## Rules
 
-The game rules are found in the `creeps_game_rules.md` file.
-
-## Campaigns
-
-Players may choose from several _campaigns_. A campaign determines the player's race and the set of creeps they face:
-
-- **Lordaeron** (the original game): player as humans
-- **Durotar** (in development): player as orcs
+Gameplay instructions are found in `creeps_game_rules.md`. A complete history of rule updates is available in `CHANGELOG.md`.
 
 ## Feedback
 
 Any feedback on this game is greatly appreciated! Get in touch with me @sprotch on Discord.
 
-## Other games inspired by the Warcraft franchise
+## Related games
 
-- [Mercenaries](https://github.com/spycherf/mercenaries), a two-player, turn-based card game
-- [Elementals](https://github.com/spycherf/elementals), a single-player card game
+If you enjoy _Creeps_, check out these other titles inspired by the _Warcraft_ franchise:
+
+- _[Mercenaries](https://github.com/spycherf/mercenaries)_ (two-player, turn-based card game)
+- _[Elementals](https://github.com/spycherf/elementals)_ (single-player card game)

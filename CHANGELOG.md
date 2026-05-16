@@ -1,5 +1,42 @@
 # Changelog
 
+## [2.0.0] - 2026-05-16
+
+### Added
+
+- New campaign, the Barrens, featuring orcs as the playable race and a new set of creeps and items
+- "Campaign selection" subsection in the setup
+- Bonus for each race, called _racial advantage_ 
+- Appendix with an overview of all player, creep and item cards across campaigns
+- Damage cap (2) for basic attacks with bonus damage
+- Creep abilities that inflict damage before retaliation starts
+    - If defeated by such an ability, the attacker cannot be the target of retaliation; the remaining player card with the highest value becomes the new target
+- "Magical" attribute for some creep abilities
+- Guide to reading ability descriptions
+
+### Changed
+
+- Document structure to facilitate the addition of new campaigns
+- Human-specific content from the original game (setting, ranks, upgrades, abilities, items) now part of the Lordaeron campaign
+- Call to Arms: now the humans' racial advantage (was the Peasant's ability)
+- The "Ranks" section now uses campaign-neutral terminology; peasant-type units are referred to as _workers_
+- Creep ranks now belong to one of three categories: _low-level_ (2-4), _mid-level_ (5-10), _high-level_ (J/Q/K); high-level creeps are no longer called "bosses"
+- Battlefield width increased to 7 cards (up from 6)
+
+### Removed
+
+- "Campaigns" section from the README
+
+### Fixed
+
+- Material list in the introduction (mention of paper clips)
+- Internal links to match the new document structure
+- Capitalized all card names for increased readability
+- Harmonized wording between campaigns
+- Rewards area now direction-agnostic (can be on either side of the battlefield)
+- If a card cannot attack or use abilities, it is said to "have no action" (since rules specify the action must be used, the previous wording led to unresolvable turns)
+- Minor rewording in various places for clarity (no rule changes)
+
 ## [1.1.0] - 2026-04-03
 
 ### Added
